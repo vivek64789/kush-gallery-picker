@@ -1,13 +1,12 @@
 import 'dart:math';
 
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../kush_gallery_picker.dart';
-import '../repo/gallery_repository.dart';
-import 'album_builder.dart';
-import 'gallery_builder.dart';
+import 'package:kush_gallery_picker/kush_gallery_picker.dart';
+import 'package:kush_gallery_picker/src/gallery/src/repo/gallery_repository.dart';
+import 'package:kush_gallery_picker/src/gallery/src/widgets/album_builder.dart';
+import 'package:kush_gallery_picker/src/gallery/src/widgets/gallery_builder.dart';
 
 ///
 class GalleryHeader extends StatefulWidget {
@@ -218,7 +217,7 @@ class _IconButton extends StatelessWidget {
         padding: EdgeInsets.zero,
         icon: Icon(
           iconData ?? Icons.close,
-          color: Colors.lightBlue.shade300,
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
           size: size ?? 26.0,
         ),
         onPressed: onPressed,

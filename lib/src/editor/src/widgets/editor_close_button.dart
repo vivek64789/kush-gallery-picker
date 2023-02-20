@@ -8,7 +8,6 @@ import '../../../animations/animations.dart';
 import '../../../camera/src/widgets/ui_handler.dart';
 import 'editor_builder.dart';
 
-
 ///
 class EditorCloseButton extends StatelessWidget {
   ///
@@ -91,7 +90,7 @@ class _AppDialog extends StatelessWidget {
       child: Text(
         'NO',
         style: Theme.of(context).textTheme.button!.copyWith(
-              color: Colors.lightBlue,
+              color: Theme.of(context).colorScheme.primary,
             ),
       ),
     );

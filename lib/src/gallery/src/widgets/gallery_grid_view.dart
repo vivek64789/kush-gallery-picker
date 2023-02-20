@@ -1,15 +1,14 @@
 import 'dart:typed_data';
 
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../kush_gallery_picker.dart';
-import '../repo/gallery_repository.dart';
-import 'album_builder.dart';
-import 'gallery_builder.dart';
-import 'gallery_permission_view.dart';
-import 'lazy_load_scroll_view.dart';
+import 'package:kush_gallery_picker/kush_gallery_picker.dart';
+import 'package:kush_gallery_picker/src/gallery/src/repo/gallery_repository.dart';
+import 'package:kush_gallery_picker/src/gallery/src/widgets/album_builder.dart';
+import 'package:kush_gallery_picker/src/gallery/src/widgets/gallery_builder.dart';
+import 'package:kush_gallery_picker/src/gallery/src/widgets/gallery_permission_view.dart';
+import 'package:kush_gallery_picker/src/gallery/src/widgets/lazy_load_scroll_view.dart';
 
 ///
 class GalleryGridView extends StatelessWidget {
@@ -113,7 +112,10 @@ class GalleryGridView extends StatelessWidget {
                         },
                         child: Icon(
                           CupertinoIcons.camera,
-                          color: Colors.lightBlue.shade300,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .primary
+                              .withOpacity(0.3),
                           size: 26,
                         ),
                       );
