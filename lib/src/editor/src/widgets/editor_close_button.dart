@@ -101,7 +101,7 @@ class _AppDialog extends StatelessWidget {
       child: Text(
         'DISCARD',
         style: Theme.of(context).textTheme.button!.copyWith(
-              color: Colors.blue,
+              color: Theme.of(context).colorScheme.primary,
             ),
       ),
     );

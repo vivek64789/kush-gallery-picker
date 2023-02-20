@@ -195,9 +195,9 @@ class _ShutterButtonState extends State<_ShutterButton>
                     builder: (value, child) {
                       switch (value.cameraType) {
                         case CameraType.selfi:
-                          return const Icon(
+                          return  Icon(
                             CupertinoIcons.person_fill,
-                            color: Colors.blue,
+                            color: Theme.of(context).colorScheme.primary,
                           );
                         case CameraType.video:
                           return _VideoIcon(radius: _videoIconRadius);
@@ -236,7 +236,7 @@ class _VideoIcon extends StatelessWidget {
       height: size,
       width: size,
       decoration: BoxDecoration(
-        color: Colors.blue,
+        color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.circular(radius),
       ),
     );

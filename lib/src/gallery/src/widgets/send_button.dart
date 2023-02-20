@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:kush_gallery_picker/assets/icons/custom_icons.dart';
 import 'package:kush_gallery_picker/kush_gallery_picker.dart';
-
 import 'package:kush_gallery_picker/src/animations/animations.dart';
 import 'package:kush_gallery_picker/src/gallery/src/widgets/gallery_builder.dart';
-
-import 'package:kush_gallery_picker/assets/icons/custom_icons.dart';
 
 ///
 class SendButton extends StatelessWidget {
@@ -66,9 +63,9 @@ class SendButton extends StatelessWidget {
             shape: BoxShape.circle,
             color: Colors.white,
           ),
-          child: const Icon(
+          child: Icon(
             CustomIcons.send,
-            color: Colors.blue,
+            color: Theme.of(context).colorScheme.primary,
           ),
         ),
       ),
