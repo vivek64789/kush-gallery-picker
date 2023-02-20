@@ -320,19 +320,19 @@ GalleryViewField(
 
 3. You can also use `CameraView` as a `Widget`.
 
----
+<!-- ---
 
 # Bugs or Requests
 
 If you encounter any problems feel free to open an [issue](https://github.com/koiralapankaj7/kush_galllery_picker/issues/new?template=bug_report.md). If you feel the library is missing a feature, please raise a [ticket](https://github.com/koiralapankaj7/kush_galllery_picker/issues/new?template=feature_request.md) on GitHub and I'll look into it. Pull request are also welcome.
 
----
+--- -->
 
 # Maintainers
 
-- [Pankaj Koirala](https://github.com/koiralapankaj7)
+<!-- - [Pankaj Koirala](https://github.com/koiralapankaj7) -->
 
-  <a href="https://twitter.com/koiralapankaj7">
+  <!-- <a href="https://twitter.com/koiralapankaj7">
     <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fkoiralapankaj7"
       alt="Twitter" />
-  </a>
+  </a> -->
