@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kush_gallery_picker/kush_gallery_picker.dart';
@@ -188,7 +189,7 @@ class _ViewState extends State<_View> with SingleTickerProviderStateMixin {
       ),
     );
 
-    final alertDialog = AlertDialog(
+    final alertDialog = CupertinoAlertDialog(
       title: Text(
         'Unselect these items?',
         style: Theme.of(context).textTheme.headline6!.copyWith(
@@ -202,12 +203,6 @@ class _ViewState extends State<_View> with SingleTickerProviderStateMixin {
             ),
       ),
       actions: [cancel, unselectItems],
-      backgroundColor: Colors.grey.shade900,
-      titlePadding: const EdgeInsets.all(16),
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 2,
-      ),
     );
 
     showDialog<void>(
