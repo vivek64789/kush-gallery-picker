@@ -1,4 +1,4 @@
-<h1 align="center">Drishya Picker</h1>
+<h1 align="center">KUSH Gallery Picker</h1>
 
 <p align="center">
   <a href="https://flutter.dev">
@@ -40,7 +40,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  kush_galllery_picker: ^latest_version
+  kush_gallery_picker: ^latest_version
 ```
 
 ### 2. Install it
@@ -64,7 +64,7 @@ $ flutter pub get
 Now in your `Dart` code, you can use:
 
 ```dart
-import 'package:kush_galllery_picker/kush_galllery_picker.dart';
+import 'package:kush_gallery_picker/kush_gallery_picker.dart';
 ```
 
 ---
@@ -140,7 +140,7 @@ Add following content to `info.plist`.
 ```
 
 ---
-
+<!-- 
 # Gallery
 
 <div style="text-align: center">
@@ -172,7 +172,7 @@ Add following content to `info.plist`.
             </td>
         </tr> 
     </table>
-</div>
+</div> -->
 
 1.  Use `SlidableGallery` to make gallery view slidable otherwise ignore it.
 
@@ -263,7 +263,7 @@ GalleryViewField(
 ---
 
 # Camera
-
+<!-- 
 <div style="text-align: center">
     <table>
         <tr>
@@ -293,7 +293,7 @@ GalleryViewField(
             </td>
         </tr> 
     </table>
-</div>
+</div> -->
 
 1.  Using `pick()` function on `CameraView` to pick media.
 
@@ -328,7 +328,7 @@ If you encounter any problems feel free to open an [issue](https://github.com/ko
 
 --- -->
 
-# Maintainers
+<!-- # Maintainers -->
 
 <!-- - [Pankaj Koirala](https://github.com/koiralapankaj7) -->
 
