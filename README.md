@@ -4,13 +4,13 @@
   <a href="https://flutter.dev">
     <img src="https://img.shields.io/badge/Platform-Flutter-02569B?logo=flutter" alt="Platform" />
   </a>
-  <a href="https://pub.dartlang.org/packages/kush_galllery_picker">
-    <img src="https://img.shields.io/pub/v/kush_galllery_picker.svg" alt="Pub Package" />
+  <a href="https://pub.dartlang.org/packages/kush_gallery_picker">
+    <img src="https://img.shields.io/pub/v/kush_gallery_picker.svg" alt="Pub Package" />
   </a>
   <a href="https://pub.dev/packages/kush_galllery_picker/score">
     <img src="https://badges.bar/kush_galllery_picker/likes" alt="likes"/>
   </a>
-  <a><img src="https://img.shields.io/github/forks/koiralapankaj7/kush_galllery_picker" alt="Forks"/></a>
+  
 </p>
 
 ---
@@ -140,39 +140,8 @@ Add following content to `info.plist`.
 ```
 
 ---
-<!-- 
 # Gallery
 
-<div style="text-align: center">
-    <table>
-        <tr>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/gallery.gif" width="200"/>
-            </td>            
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/1.jpg" width="200"/>
-            </td>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/7.jpg" width="200" />
-            </td>
-        </tr> 
-    </table>
-</div>
-<div style="text-align: center">
-    <table>
-        <tr>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/photo_editor.gif" width="200"/>
-            </td>            
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/5.jpg" width="200"/>
-            </td>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/6.jpg" width="200" />
-            </td>
-        </tr> 
-    </table>
-</div> -->
 
 1.  Use `SlidableGallery` to make gallery view slidable otherwise ignore it.
 
@@ -263,37 +232,7 @@ GalleryViewField(
 ---
 
 # Camera
-<!-- 
-<div style="text-align: center">
-    <table>
-        <tr>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/camera.gif" width="200"/>
-            </td>            
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/8.jpg" width="200"/>
-            </td>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/12.jpg" width="200" />
-            </td>
-        </tr> 
-    </table>
-</div>
-<div style="text-align: center">
-    <table>
-        <tr>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/playground.gif" width="200"/>
-            </td>            
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/photo_editor.gif" width="200"/>
-            </td>
-            <td style="text-align: center">
-                <img src="https://raw.githubusercontent.com/koiralapankaj7/kush_galllery_picker/dev/assets/10.jpg" width="200" />
-            </td>
-        </tr> 
-    </table>
-</div> -->
+
 
 1.  Using `pick()` function on `CameraView` to pick media.
 
@@ -320,19 +259,3 @@ GalleryViewField(
 
 3. You can also use `CameraView` as a `Widget`.
 
-<!-- ---
-
-# Bugs or Requests
-
-If you encounter any problems feel free to open an [issue](https://github.com/koiralapankaj7/kush_galllery_picker/issues/new?template=bug_report.md). If you feel the library is missing a feature, please raise a [ticket](https://github.com/koiralapankaj7/kush_galllery_picker/issues/new?template=feature_request.md) on GitHub and I'll look into it. Pull request are also welcome.
-
---- -->
-
-<!-- # Maintainers -->
-
-<!-- - [Pankaj Koirala](https://github.com/koiralapankaj7) -->
-
-  <!-- <a href="https://twitter.com/koiralapankaj7">
-    <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fkoiralapankaj7"
-      alt="Twitter" />
-  </a> -->
