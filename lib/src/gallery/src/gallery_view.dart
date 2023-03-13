@@ -175,7 +175,7 @@ class _ViewState extends State<_View> with SingleTickerProviderStateMixin {
       child: Text(
         'CANCEL',
         style: Theme.of(context).textTheme.button!.copyWith(
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.secondary,
             ),
       ),
     );
@@ -192,22 +192,18 @@ class _ViewState extends State<_View> with SingleTickerProviderStateMixin {
     final alertDialog = CupertinoAlertDialog(
       title: Text(
         'Unselect these items?',
-        style: Theme.of(context).textTheme.headline6!.copyWith(
-              color: Colors.white70,
-            ),
+        style: Theme.of(context).textTheme.headline4,
       ),
       content: Text(
         'Going back will undo the selections you made.',
-        style: Theme.of(context).textTheme.bodyText2!.copyWith(
-              color: Colors.grey.shade600,
-            ),
+        style: Theme.of(context).textTheme.bodyText2,
       ),
       actions: [cancel, unselectItems],
     );
 
-    showDialog<void>(
+    showGeneralDialog(
       context: context,
-      builder: (context) => alertDialog,
+      pageBuilder: (context, animation, secondaryAnimation) => alertDialog,
     );
   }
 

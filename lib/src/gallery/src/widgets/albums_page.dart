@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 
-import '../../../../kush_gallery_picker.dart';
-import '../repo/gallery_repository.dart';
-import 'album_builder.dart';
+import 'package:kush_gallery_picker/kush_gallery_picker.dart';
+import 'package:kush_gallery_picker/src/gallery/src/repo/gallery_repository.dart';
+import 'package:kush_gallery_picker/src/gallery/src/widgets/album_builder.dart';
 
 const _imageSize = 48;
 
@@ -36,11 +35,11 @@ class AlbumsPage extends StatelessWidget {
         if (value.albums.isEmpty) {
           return Container(
             alignment: Alignment.center,
-            color: Colors.black,
-            child: const Text(
+            color: Theme.of(context).colorScheme.onPrimary,
+            child: Text(
               'No albums',
               style: TextStyle(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.primary,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -98,7 +97,7 @@ class _AlbumTile extends StatelessWidget {
       },
       child: Container(
         padding: const EdgeInsets.only(left: 16, bottom: 20, right: 16),
-        color: Colors.black,
+        color: Theme.of(context).colorScheme.onPrimary,
         child: Row(
           children: [
             // Image
@@ -133,8 +132,8 @@ class _AlbumTile extends StatelessWidget {
                     isAll
                         ? 'All Photos'
                         : album.value.assetPathEntity?.name ?? '',
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
                       fontWeight: FontWeight.w700,
                     ),
                   ),

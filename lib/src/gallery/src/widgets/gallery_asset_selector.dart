@@ -157,15 +157,15 @@ class GalleryAssetSelectorState extends State<GalleryAssetSelector>
                               });
                             },
                             label: 'EDIT',
-                            background: Colors.white,
-                            labelColor: Colors.black,
+                            background: Theme.of(context).colorScheme.onPrimary,
+                            labelColor: Theme.of(context).colorScheme.primary,
                           ),
                         ),
                       ),
                     ),
 
                   // Margin
-                  if (canEdit) const SizedBox(width: 16),
+                  // if (canEdit) const SizedBox(width: 16),
 
                   // Select
                   Align(

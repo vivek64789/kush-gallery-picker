@@ -2,12 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:kush_gallery_picker/kush_gallery_picker.dart';
-import 'package:meta/meta.dart';
-
 import 'package:kush_gallery_picker/src/animations/animations.dart';
 import 'package:kush_gallery_picker/src/camera/src/widgets/ui_handler.dart';
-
-import '../repo/gallery_repository.dart';
+import 'package:kush_gallery_picker/src/gallery/src/repo/gallery_repository.dart';
+import 'package:meta/meta.dart';
 
 ///
 /// Gallery controller
@@ -121,12 +119,45 @@ class GalleryController extends ValueNotifier<GalleryValue> {
     bool edited = false,
   }) {
     // Check limit
+    // check limit and if it is single selection update with new item and if
+    // there is multiple selection then allow delecting and selecting with new
+    // item within limit
+
     if (reachedMaximumLimit) {
-      UIHandler.of(context).showSnackBar(
-        'Maximum selection limit of '
-        '${setting.maximumCount} has been reached!',
-      );
-      return;
+      if (singleSelection) {
+        // Handle single selection mode
+        if (_setting.selectionMode == SelectionMode.actionBased) {
+          editEntity(context, entity).then((ety) {
+            if (ety != null) {
+              _onChanged?.call(ety, false);
+              completeTask(context, items: [ety]);
+            }
+          });
+        } else {
+          _onChanged?.call(entity, false);
+          completeTask(context, items: [entity]);
+        }
+        return;
+      } else {
+        // Handle multiple selection mode
+        final entities = value.selectedEntities.toList();
+        final isSelected = entities.contains(entity);
+
+        // Unselect item if selected previously
+        if (isSelected) {
+          _onChanged?.call(entity, true);
+          entities.remove(entity);
+          _internal = true;
+          value = value.copyWith(selectedEntities: entities);
+          return;
+        }
+
+        return;
+      }
+      // UIHandler.of(context).showSnackBar(
+      //   'Maximum selection limit of '
+      //   '${setting.maximumCount} has been reached!',
+      // );
     }
 
     // Handle single selection mode
