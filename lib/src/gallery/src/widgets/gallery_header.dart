@@ -217,7 +217,7 @@ class _IconButton extends StatelessWidget {
         padding: EdgeInsets.zero,
         icon: Icon(
           iconData ?? Icons.close,
-          color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+          color: Theme.of(context).colorScheme.onPrimary,
           size: size ?? 26.0,
         ),
         onPressed: onPressed,
@@ -258,7 +258,7 @@ class _AlbumDetail extends StatelessWidget {
               isAll
                   ? controller.setting.albumTitle
                   : album.value.assetPathEntity?.name ?? 'Unknown',
-              style: Theme.of(context).textTheme.subtitle2!.copyWith(
+              style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Colors.white,
                     fontWeight: FontWeight.w600,
                   ),
@@ -273,7 +273,7 @@ class _AlbumDetail extends StatelessWidget {
           subtitle ?? 'Select',
           style: Theme.of(context)
               .textTheme
-              .caption!
+              .bodySmall!
               .copyWith(color: Colors.grey.shade500),
         ),
       ],

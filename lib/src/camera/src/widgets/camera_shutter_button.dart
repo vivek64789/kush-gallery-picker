@@ -5,8 +5,8 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../kush_gallery_picker.dart';
-import 'camera_builder.dart';
+import 'package:kush_gallery_picker/kush_gallery_picker.dart';
+import 'package:kush_gallery_picker/src/camera/src/widgets/camera_builder.dart';
 
 ///
 class CameraShutterButton extends StatelessWidget {
@@ -195,9 +195,9 @@ class _ShutterButtonState extends State<_ShutterButton>
                     builder: (value, child) {
                       switch (value.cameraType) {
                         case CameraType.selfi:
-                          return  Icon(
+                          return const Icon(
                             CupertinoIcons.person_fill,
-                            color: Theme.of(context).colorScheme.primary,
+                            color: Colors.blue,
                           );
                         case CameraType.video:
                           return _VideoIcon(radius: _videoIconRadius);

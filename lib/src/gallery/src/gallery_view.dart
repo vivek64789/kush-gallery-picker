@@ -37,7 +37,6 @@ class GalleryView extends StatefulWidget {
   /// Pick media
   static Future<List<GalleryPickerEntity>?> pick(
     BuildContext context, {
-
     /// Gallery controller
     GalleryController? controller,
 
@@ -174,7 +173,7 @@ class _ViewState extends State<_View> with SingleTickerProviderStateMixin {
       onPressed: Navigator.of(context).pop,
       child: Text(
         'CANCEL',
-        style: Theme.of(context).textTheme.button!.copyWith(
+        style: Theme.of(context).textTheme.labelLarge!.copyWith(
               color: Theme.of(context).colorScheme.secondary,
             ),
       ),
@@ -183,7 +182,7 @@ class _ViewState extends State<_View> with SingleTickerProviderStateMixin {
       onPressed: _onSelectionClear,
       child: Text(
         'UNSELECT ITEMS',
-        style: Theme.of(context).textTheme.button!.copyWith(
+        style: Theme.of(context).textTheme.labelLarge!.copyWith(
               color: Theme.of(context).colorScheme.primary,
             ),
       ),
@@ -192,11 +191,11 @@ class _ViewState extends State<_View> with SingleTickerProviderStateMixin {
     final alertDialog = CupertinoAlertDialog(
       title: Text(
         'Unselect these items?',
-        style: Theme.of(context).textTheme.headline4,
+        style: Theme.of(context).textTheme.headlineMedium,
       ),
       content: Text(
         'Going back will undo the selections you made.',
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.bodyMedium,
       ),
       actions: [cancel, unselectItems],
     );
