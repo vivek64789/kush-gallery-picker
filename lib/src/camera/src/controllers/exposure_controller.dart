@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../kush_gallery_picker.dart';
+import 'package:kush_gallery_picker/kush_gallery_picker.dart';
 
 ///
 class ExposureController extends ValueNotifier<ExposureValue> {

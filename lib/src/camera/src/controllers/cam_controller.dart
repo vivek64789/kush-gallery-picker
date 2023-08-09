@@ -4,10 +4,9 @@ import 'dart:io';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:kush_gallery_picker/kush_gallery_picker.dart';
+import 'package:kush_gallery_picker/src/animations/animations.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path;
-
-import 'package:kush_gallery_picker/src/animations/animations.dart';
 
 /// Camera controller
 
