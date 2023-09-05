@@ -68,8 +68,8 @@ class EditorShutterButton extends StatelessWidget {
                   shape: BoxShape.circle,
                   color: Colors.white,
                 ),
-                child:  Icon(
-                  CustomIcons.send,
+                child: Icon(
+                  Icons.send,
                   color: Theme.of(context).colorScheme.primary,
                 ),
               ),
