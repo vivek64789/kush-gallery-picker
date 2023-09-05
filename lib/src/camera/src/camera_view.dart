@@ -13,7 +13,6 @@ import '../../animations/animations.dart';
 import '../../gallery/src/widgets/gallery_builder.dart';
 import '../../gallery/src/widgets/gallery_permission_view.dart';
 
-
 const Duration _kRouteDuration = Duration(milliseconds: 300);
 
 ///
@@ -47,7 +46,6 @@ class CameraView extends StatefulWidget {
   /// Open camera view for picking.
   static Future<List<GalleryPickerEntity>?> pick(
     BuildContext context, {
-
     /// Camera controller
     CamController? controller,
 
