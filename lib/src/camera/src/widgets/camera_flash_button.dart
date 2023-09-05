@@ -39,7 +39,7 @@ class CameraFlashButton extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(left: isOn ? 8.0 : 0.0),
               child: Icon(
-                isOn ? CustomIcons.flashon : CustomIcons.flashoff,
+                isOn ? Icons.flash_on : Icons.flash_off,
                 color: Colors.white,
               ),
             ),

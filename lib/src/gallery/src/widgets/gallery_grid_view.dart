@@ -114,7 +114,7 @@ class GalleryGridView extends StatelessWidget {
                           CupertinoIcons.camera,
                           color: Theme.of(context)
                               .colorScheme
-                              .primary
+                              .onPrimary
                               .withOpacity(0.3),
                           size: 26,
                         ),

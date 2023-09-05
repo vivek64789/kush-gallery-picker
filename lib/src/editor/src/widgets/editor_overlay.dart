@@ -9,7 +9,7 @@ import 'editor_button_collection.dart';
 import 'editor_close_button.dart';
 import 'editor_shutter_button.dart';
 
-const _top = 16.0;
+const _top = 30.0;
 
 ///
 class EditorOverlay extends StatelessWidget {
@@ -27,44 +27,46 @@ class EditorOverlay extends StatelessWidget {
     return ValueListenableBuilder<EditorValue>(
       valueListenable: controller,
       builder: (context, value, child) {
-        return Stack(
-          fit: StackFit.expand,
-          children: [
-            //
+        return SafeArea(
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              //
 
-            // Textfield
-            EditorTextfield(controller: controller),
+              // Textfield
+              EditorTextfield(controller: controller),
 
-            // Close button
-            Positioned(
-              left: 8,
-              top: _top,
-              child: EditorCloseButton(controller: controller),
-            ),
+              // Close button
+              Positioned(
+                left: 8,
+                top: _top,
+                child: EditorCloseButton(controller: controller),
+              ),
 
-            // Background changer
-            Positioned(
-              left: 16,
-              bottom: 16,
-              child: BackgroundSwitcher(controller: controller),
-            ),
+              // Background changer
+              Positioned(
+                left: 16,
+                bottom: 16,
+                child: BackgroundSwitcher(controller: controller),
+              ),
 
-            // Screenshot capture button
-            Positioned(
-              right: 16,
-              bottom: 16,
-              child: EditorShutterButton(controller: controller),
-            ),
+              // Screenshot capture button
+              Positioned(
+                right: 16,
+                bottom: 16,
+                child: EditorShutterButton(controller: controller),
+              ),
 
-            // Sticker buttons
-            Positioned(
-              right: 16,
-              top: controller.value.isStickerPickerOpen ? 0.0 : _top,
-              child: EditorButtonCollection(controller: controller),
-            ),
+              // Sticker buttons
+              Positioned(
+                right: 16,
+                top: controller.value.isStickerPickerOpen ? 0.0 : _top,
+                child: EditorButtonCollection(controller: controller),
+              ),
 
-            //
-          ],
+              //
+            ],
+          ),
         );
       },
     );

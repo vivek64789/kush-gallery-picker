@@ -64,7 +64,7 @@ class SendButton extends StatelessWidget {
             color: Colors.white,
           ),
           child: Icon(
-            CustomIcons.send,
+            Icons.send,
             color: Theme.of(context).colorScheme.primary,
           ),
         ),

@@ -22,7 +22,7 @@ class EditorCloseButton extends StatelessWidget {
   Future<bool> _onPressed(BuildContext context, {bool pop = true}) async {
     if (!controller.value.hasStickers) {
       if (pop) {
-        UIHandler.of(context).pop();
+        Navigator.of(context).pop();
       }
       //  else {
       //   await UIHandler.showStatusBar();
@@ -69,7 +69,7 @@ class EditorCloseButton extends StatelessWidget {
               color: Colors.black26,
             ),
             child: const Icon(
-              CustomIcons.close,
+              Icons.close,
               color: Colors.white,
               size: 16,
             ),

@@ -47,7 +47,7 @@ class CameraTypeChanger extends StatelessWidget {
                 child: Transform.rotate(
                   angle: -pi / 2,
                   child: const Icon(
-                    CustomIcons.play,
+                    Icons.play_circle,
                     color: Colors.white,
                   ),
                 ),

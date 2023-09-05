@@ -297,28 +297,30 @@ class _CameraView extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = context.camController!;
 
-    return Stack(
-      children: [
-        // Camera type specific view
-        CameraBuilder(
-          controller: controller,
-          builder: (value, child) {
-            if (value.cameraType == CameraType.text) {
-              return DrishyaEditor(
-                controller: controller.kushEditingController,
-                setting: controller.editorSetting,
-                hideOverlay: true,
-              );
-            }
-            return RawCameraView(controller: controller);
-          },
-        ),
+    return SafeArea(
+      child: Stack(
+        children: [
+          // Camera type specific view
+          CameraBuilder(
+            controller: controller,
+            builder: (value, child) {
+              if (value.cameraType == CameraType.text) {
+                return DrishyaEditor(
+                  controller: controller.kushEditingController,
+                  setting: controller.editorSetting,
+                  hideOverlay: true,
+                );
+              }
+              return RawCameraView(controller: controller);
+            },
+          ),
 
-        // Camera control overlay
-        CameraOverlay(controller: controller),
+          // Camera control overlay
+          CameraOverlay(controller: controller),
 
-        //
-      ],
+          //
+        ],
+      ),
     );
   }
 }

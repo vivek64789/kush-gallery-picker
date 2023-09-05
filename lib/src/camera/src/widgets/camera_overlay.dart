@@ -84,63 +84,65 @@ class _PlaygroundOverlay extends StatelessWidget {
   Widget build(BuildContext context) {
     final deController = controller.kushEditingController;
 
-    return CameraBuilder(
-      controller: controller,
-      builder: (value, child) {
-        if (value.cameraType != CameraType.text) {
-          return const SizedBox();
-        }
-        return child!;
-      },
-      child: EditorBuilder(
-        controller: deController,
-        builder: (context, value, child) {
-          return Stack(
-            fit: StackFit.expand,
-            children: [
-              // Close button
-              Positioned(
-                left: 16,
-                top: _top,
-                child: EditorCloseButton(
-                  controller: deController,
-                ),
-              ),
-
-              // Background changer
-              Positioned(
-                left: 16,
-                bottom: 16,
-                child: BackgroundSwitcher(
-                  controller: deController,
-                ),
-              ),
-
-              // Screenshot capture button
-              Positioned(
-                right: 16,
-                bottom: 16,
-                child: EditorShutterButton(
-                  controller: deController,
-                  onSuccess: (entity) {
-                    UIHandler.of(context).pop([entity]);
-                  },
-                ),
-              ),
-
-              // Sticker buttons
-              Positioned(
-                right: 16,
-                top: _top,
-                child: EditorButtonCollection(
-                  controller: deController,
-                ),
-              ),
-
-              //
-            ],
-          );
+    return SafeArea(
+      child: CameraBuilder(
+        controller: controller,
+        builder: (value, child) {
+          if (value.cameraType != CameraType.text) {
+            return const SizedBox();
+          }
+          return child!;
         },
+        child: EditorBuilder(
+          controller: deController,
+          builder: (context, value, child) {
+            return Stack(
+              fit: StackFit.expand,
+              children: [
+                // Close button
+                Positioned(
+                  left: 16,
+                  top: _top,
+                  child: EditorCloseButton(
+                    controller: deController,
+                  ),
+                ),
+
+                // Background changer
+                Positioned(
+                  left: 16,
+                  bottom: 16,
+                  child: BackgroundSwitcher(
+                    controller: deController,
+                  ),
+                ),
+
+                // Screenshot capture button
+                Positioned(
+                  right: 16,
+                  bottom: 16,
+                  child: EditorShutterButton(
+                    controller: deController,
+                    onSuccess: (entity) {
+                      UIHandler.of(context).pop([entity]);
+                    },
+                  ),
+                ),
+
+                // Sticker buttons
+                Positioned(
+                  right: 16,
+                  top: _top,
+                  child: EditorButtonCollection(
+                    controller: deController,
+                  ),
+                ),
+
+                //
+              ],
+            );
+          },
+        ),
       ),
     );
   }

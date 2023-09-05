@@ -35,7 +35,7 @@ class CameraRotateButton extends StatelessWidget {
             child: value.hideCameraRotationButton
                 ? const SizedBox()
                 : const Icon(
-                    CustomIcons.cameraRotate,
+                    Icons.switch_camera_rounded,
                     color: Colors.white,
                   ),
           ),
